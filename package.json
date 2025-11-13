@@ -1,0 +1,36 @@
+{
+  "name": "youtube-mcp-server",
+  "version": "1.0.0",
+  "description": "YouTube MCP Server for local deployment",
+  "main": "build/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "tsx watch src/index.ts",
+    "setup": "npm run build && node build/setup.js",
+    "test-connection": "node build/test.js"
+  },
+  "keywords": [
+    "mcp",
+    "youtube",
+    "video",
+    "claude"
+  ],
+  "author": "Ubiq",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.4",
+    "google-auth-library": "^9.4.0",
+    "googleapis": "^128.0.0",
+    "open": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.6.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
